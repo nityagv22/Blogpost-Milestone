@@ -17,3 +17,12 @@ The html code for the navbar has been added as a base static file, as it is used
 
 The style.css file is also loaded in with the base static file. If you want to have a further look at it, it is located in : 'blogpost/user/templates/base.html'
 
+To run on your machine, open Command Prompt, make sure you are in the blogpost directory and type the following:
+
+python manage.py runserver
+
+Then open the localhost website using the link given in the Command Prompt window or use:
+
+http://127.0.0.1:8000/
+
+in your browser
