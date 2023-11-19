@@ -11,8 +11,8 @@ The html code for the navbar has been added as a base static file, as it is used
 
 {% block body%}
 
-#the code for the main body content
-
+#the code for the main body content	
+	
 {% endblock %}
 
 The style.css file is also loaded in with the base static file. If you want to have a further look at it, it is located in : 'blogpost/user/templates/base.html'
