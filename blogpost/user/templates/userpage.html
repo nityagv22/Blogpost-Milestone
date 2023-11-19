@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    {% block body%}
+    {% for user in user_list %}
+
+    <ul>
+        <li>
+
+            <a href="{% url 'user:details' user.id %}">{{user.user_name}} : {{user.user_password}} : {{user.user_id}} :
+                {{user.id}}</a>
+        </li>
+    </ul>
+
+    {% endfor %}
+    {% endblock %}
+</body>
+
+</html>
