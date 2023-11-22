@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Blog Page{% endblock title %}
+
+{% block body %}
+<h1>Welcome to the Milestone Blog</h1>
+{% for blog in blogs %}
+<a href="{{blog.slug}}/">{{blog.title}}</a>
+{{blog.content | slice:75}}...
+<br>
+{% endfor %}
+{% endblock body %}

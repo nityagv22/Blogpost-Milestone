@@ -1,24 +1,10 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-
-</head>
-
-
-<body>
+{% block title %}user.username{% endblock title %}user.username
     {% block body %}
     <main>
-        <h1>{{user.user_name}}</h1>
-        <h2>{{user.user_password}}</h2>
-        <h3>{{user.id}}</h3>
-        <h4>{{user.user_id}}</h4>
+        <h1>{{user.username}}</h1>
+        <h3>{{user.email}}</h3>
+        <h4>{{user.id}}</h4>
     </main>
     {% endblock %}
 </body>

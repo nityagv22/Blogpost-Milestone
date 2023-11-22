@@ -1,11 +1,13 @@
 from django.db import models
 
 # Create your models here.
-class Users(models.Model):
 
+
+class Blog(models.Model):
+    serial_num = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    slug = models.CharField(max_length=100)
+    time = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.user_name
-
-    user_name = models.CharField(max_length=200)
-    user_password = models.CharField(max_length=50)
-    user_id = models.IntegerField()
+        return self.title

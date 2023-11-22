@@ -3,7 +3,8 @@
 <html lang="en">
 
 <head>
-    <title>Document</title>
+
+    <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
 </head>
@@ -19,16 +20,21 @@
                 <li><a href="{% url 'user:user list' %}">Users</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'signup' %}">Signup</a></li>
+                <li><a href="{% url 'blogpage' %}">Blogs</a></li>
             </ul>
         </nav>
-        {% if messages %}
-        {%for messages in messages%}
-        {{message}}
-        {% endfor %}
-        {% endif %}
+        
     </header>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
     {% block body%}
-    {% endblock %}
+    {% endblock body%}
 </body>
 
 </html>

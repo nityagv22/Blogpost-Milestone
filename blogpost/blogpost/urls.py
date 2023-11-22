@@ -23,5 +23,7 @@ urlpatterns = [
     path('users/', include('user.urls')),
     path('', user_views.homepage, name='home'),
     path('login/', user_views.loginpage, name='login'),
-    path('signup/', user_views.signup, name='signup' )
+    path('signup/', user_views.signup, name='signup' ),
+    path('blogpage/<str:slug>/', user_views.blogpost, name='blogpost'),
+    path('blogpage/', user_views.blogpage, name='blogpage')
 ]
