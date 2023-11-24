@@ -3,16 +3,66 @@
 
 <head>
     <title>User Details</title>
-    <!-- Add any necessary CSS or other header content -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        li:first-child {
+            font-weight: bold;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            height:100px ;
+            width: 100px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            border-radius: 18px;
+           
+        }
+
+        div {
+           text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <h1>User Details</h1>
+    <div class="d-flex flex-row justify-content-center">
+    <img src=""/>
+    </div>
     <ul>
         <li>Username: {{ user.username }}</li>
         <li>Email: {{ user.email }}</li>
         <li>ID: {{ user.id }}</li>
-        <!-- Add other user details as needed -->
+        
     </ul>
 </body>
 
