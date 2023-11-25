@@ -67,3 +67,20 @@ input[type="submit"] {
     color: #fff;
     cursor: pointer;
 }
+
+img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-radius: 18px;
+
+}
+
+div {
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: underline;
+}

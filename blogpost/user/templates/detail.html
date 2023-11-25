@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
-{% block title %}user.username{% endblock title %}user.username
+{% block title %}{{user.username}}{% endblock title %}
     {% block body %}
-    <main>
-        <h1>{{user.username}}</h1>
-        <h3>{{user.email}}</h3>
-        <h4>{{user.id}}</h4>
-    </main>
+    <h1>User Details</h1>
+    <div class="d-flex flex-row justify-content-center">
+    <img src=""/>
+    </div>
+    <ul>
+        <li>Username: {{ user.username }}</li>
+        <li>Email: {{ user.email }}</li>
+        <li>ID: {{ user.id }}</li>
+        
+    </ul>
     {% endblock %}
 </body>
 
