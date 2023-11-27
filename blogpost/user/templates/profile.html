@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Profile{% endblock title %}
+    {% block body %}
+    <h1>Your Profile</h1>
+    <div class="d-flex flex-row justify-content-center">
+    <img src="{{ user.profile.image.url }}">
+    </div>
+    <ul>
+        <li>Username: {{ user.username }}</li>
+        <li>Email: {{ user.email }}</li>
+        <li>ID: {{ user.id }}</li>
+        
+    </ul>
+    <h2>Description</h2>
+    {{user.profile.description}}
+    {% endblock %}

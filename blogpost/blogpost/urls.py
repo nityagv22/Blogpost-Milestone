@@ -17,13 +17,25 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include,path
 from user import views as user_views
+from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('user.urls')),
     path('', user_views.homepage, name='home'),
-    path('login/', user_views.loginpage, name='login'),
     path('signup/', user_views.signup, name='signup' ),
     path('blogpage/<str:slug>/', user_views.blogpost, name='blogpost'),
-    path('blogpage/', user_views.blogpage, name='blogpage')
+    path('blogpage/', user_views.blogpage, name='blogpage'),
+    path('login/',auth_views.LoginView.as_view(template_name='loginpage.html'),name='login'),
+    path('logout/',auth_views.LogoutView.as_view(template_name='logoutpage.html'),name='logout'),
+    path('profile/',user_views.profile, name='profile'),
+    path('addblog/',user_views.CreateBlog.as_view(), name='createblog'),
+    path('update/<int:id>/', user_views.update_blog, name='updateblog'),
+    path('delete/<int:id>', user_views.delete_blog, name='deleteblog')
 ]
+
+urlpatterns += [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

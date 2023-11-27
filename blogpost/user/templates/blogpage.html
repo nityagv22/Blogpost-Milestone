@@ -4,8 +4,10 @@
 {% block body %}
 <h1>Welcome to the Milestone Blog</h1>
 {% for blog in blogs %}
-<a href="{{blog.slug}}/">{{blog.title}}</a>
+<a href="{{blog.slug}}/">{{blog.title}}</a>By :  {{blog.user_name}}
+<br>
 {{blog.content | slice:75}}...
+<br>
 <br>
 {% endfor %}
 {% endblock body %}

@@ -18,9 +18,15 @@
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="{% url 'user:user list' %}">Users</a></li>
-                <li><a href="{% url 'login' %}">Login</a></li>
                 <li><a href="{% url 'signup' %}">Signup</a></li>
                 <li><a href="{% url 'blogpage' %}">Blogs</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout'%}">Logout</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+                <li><a href="{% url 'createblog' %}">Create Blog</a></li>
             </ul>
         </nav>
         
