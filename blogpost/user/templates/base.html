@@ -26,16 +26,16 @@
                 <button class="navbar-toggler h6" data-toggle="collapse" data-target="#collapseNav"><span class="fas fa-bars text-light"></span></button>
                 <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
                     <div class="navbar-nav">
-                        <a href="{% url 'user:user list' %}" class="nav-item nav-link text-light h6 mx-2 text-left">Users</a>
-                        <a href="{% url 'signup' %}" class="nav-item nav-link text-light h6 mx-2">Signup</a>
-                        <a href="{% url 'blogpage' %}" class="nav-item nav-link text-light h6 mx-2">Blogs</a>
-                        <a href="#" class="nav-item nav-link text-light h6 mx-2">Services</a>
-                        <a href="#" class="nav-item nav-link text-light h6 mx-2">Contact</a>
+                        <a href="{% url 'user:user list' %}" class="nav-item nav-link text-light h6 mx-2 align">Users</a>
+                        <a href="{% url 'signup' %}" class="nav-item nav-link text-light h6 mx-2 align">Signup</a>
+                        <a href="{% url 'blogpage' %}" class="nav-item nav-link text-light h6 mx-2 align">Blogs</a>
+                        <a href="#" class="nav-item nav-link text-light h6 mx-2 align">Services</a>
+                        <a href="#" class="nav-item nav-link text-light h6 mx-2 align">Contact</a>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'logout'%}" class="nav-item nav-link text-light h6 mx-2">Logout</a>
-                        <a href="{% url 'profile' %}" class="nav-item nav-link text-light h6 mx-2">Profile</a>
+                        <a href="{% url 'logout'%}" class="nav-item nav-link text-light h6 mx-2 align">Logout</a>
+                        <a href="{% url 'profile' %}" class="nav-item nav-link text-light h6 mx-2 align">Profile</a>
                         {% endif %}
-                        <a href="{% url 'createblog' %}" class="nav-item nav-link text-light h6 mx-2">Create Blog</a>
+                        <a href="{% url 'createblog' %}" class="nav-item nav-link text-light h6 mx-2 align">Create Blog</a>
                     </div>
                 </div>
             </div>
