@@ -12,23 +12,6 @@ header {
     padding: 10px 0;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: right;
-}
-
-nav li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-}
-
 main {
     padding: 20px;
     text-align: center;
