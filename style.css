@@ -3,16 +3,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
-    padding-top:100%;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-}
-nav{
-    height: 100px;
 }
 
 main {
@@ -23,7 +19,3 @@ main {
 h1 {
     color: #333;
 }
-.align{
-    align-items: start;
-}
-
