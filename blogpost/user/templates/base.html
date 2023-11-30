@@ -21,6 +21,7 @@
                 <a href="#" class="navbar-brand" ><img class="rounded-5" src="Logo.jpg" alt="Company_Logo" style=" height:7%; width: 7%;"></a>
                 <a href="{% url 'home' %}" class="nav-item nav-link text-light h6">Home</a>
                 <a href="#" class="nav-item nav-link text-light h6">About</a>
+                {% else %}
                 <a href="{% url 'login' %}" class="btn btn-outline-light h6">Login</a>
                 <button class="navbar-toggler h6" data-toggle="collapse" data-target="#collapseNav"><span class="fas fa-bars text-light"></span></button>
                 <div class="collapse navbar-collapse flex-grow-0" id="collapseNav">
@@ -30,8 +31,10 @@
                         <a href="{% url 'blogpage' %}" class="nav-item nav-link text-light h6 mx-2">Blogs</a>
                         <a href="#" class="nav-item nav-link text-light h6 mx-2">Services</a>
                         <a href="#" class="nav-item nav-link text-light h6 mx-2">Contact</a>
+                        {% if user.is_authenticated %}
                         <a href="{% url 'logout'%}" class="nav-item nav-link text-light h6 mx-2">Logout</a>
                         <a href="{% url 'profile' %}" class="nav-item nav-link text-light h6 mx-2">Profile</a>
+                        {% endif %}
                         <a href="{% url 'createblog' %}" class="nav-item nav-link text-light h6 mx-2">Create Blog</a>
                     </div>
                 </div>
