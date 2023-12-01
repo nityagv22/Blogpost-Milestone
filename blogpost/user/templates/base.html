@@ -17,13 +17,21 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+    <style>
+        body {
+            padding-top: 90px;
+        }
+        nav{
+            margin-top: -1.5%;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xxxl">
+    <nav class="navbar navbar-expand-xxxl fixed-top">
         <div class="container-fluid my-3 bg-dark">
             <a href="#" class="navbar-brand"><img class="rounded-5" src="Logo.jpg" alt="Company_Logo"
-                    style="height:7%; width: 7%;"></a>
+                style="height:7%; width: 7%;"></a>
 
             <div class="ml-auto d-inline-flex justify-content-between">
                 <a href="{% url 'home' %}" class="nav-item nav-link text-light me-5">Home</a>
